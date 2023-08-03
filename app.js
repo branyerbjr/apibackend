@@ -5,7 +5,9 @@ const cors = require('cors');
 const app = express();
 
 // Middleware para permitir CORS
-app.use(cors());
+app.use(cors({
+    origin: 'https://sinh.com.br',
+  }));
 
 // Endpoint para obtener el rastreo de la primera API
 app.post('/seguimiento-kangu', async (req, res) => {
